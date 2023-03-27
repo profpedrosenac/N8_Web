@@ -1,0 +1,40 @@
+* {
+    font-family: arial;
+}
+body{
+    background-color: black;
+    color: #FFFFFF;
+    background-image: url('img/cac1.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50px 100px;
+    margin-left: 350px;
+    /* margin-left: 50px;
+    margin-right: 120px;
+    margin-top: 300px;
+    margin-bottom: 100px; */
+    /* margin: 100px 30px 200px 300px; */
+        /*  top  right bottom left  */
+    
+}
+h2 {
+    text-align: center;
+}
+.notas {
+    text-align: right;
+}
+p {
+    text-align: justify;
+}
+.larguraimg{
+    width: 500px;
+}
+.alturaimg{
+    height: 200px;
+}
+.margemImg{
+    margin: 15px;
+}
+.textoCentro{
+    text-align: center;
+}
