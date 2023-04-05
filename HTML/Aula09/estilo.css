@@ -1,0 +1,114 @@
+*{
+    font-family: arial;
+}
+body{
+    background-color: bisque;
+    margin: 0px;
+}
+
+#topo{
+    height: 500px;
+    background-color: blue;
+    padding: 1px;
+}
+#itemTopo{
+    width: 1366px;
+    height: 180px;
+    margin: auto;
+    margin-top: 50px;
+}
+#logo{
+    width: 300px;
+    height: 180px;
+    background-color: #00ffff;
+    float: left;
+}
+#menu{
+    width: 1056px;
+    height: 180px;
+    background-color: #00ffff;
+    float: right;
+}
+.itemMenu{
+    width: 200px;
+    height: 75px;
+    background-color: gray;
+    border-radius: 0px;
+    float: left;
+    margin-left: 10px; 
+    margin-top: 53px;
+    transition: 2s;
+}
+.itemMenu:hover{
+    background-color: red;
+    border-radius: 30px;
+}
+.redeSocial{
+    width: 75px;
+    height: 75px;
+    background-color: gray;
+    float: right;
+    margin-right: 10px; 
+    margin-top: 53px;
+}
+#banner{
+    width: 1366px;
+    height: 200px;
+    background-color: gray;
+    margin: auto;
+    margin-top: 10px;
+}
+.itemConteudo{
+    width: 1366px;
+    height: 300px;
+    background-color: blue;
+    margin: auto;
+    margin-top: 10px;
+}
+.textoConteudo{
+    width: 846px;
+    height: 280px;
+    background-color: gray;
+    float: left;
+    margin: 10px;
+}
+.imagemConteudo{
+    width: 500px;
+    height: 300px;
+    float: left;
+    background-color: gray;
+}
+#mapa{
+    margin-top: 10px;
+    height: 400px;
+    background-color: blue;
+}
+#rodape{
+    margin-top: 10px;
+    height: 150px;
+    background-color: blue;
+    padding: 1px;
+}
+#itemRodape{
+    width: 1366px;
+    height: 75px;
+    margin: auto;
+    margin-top: 38px;
+}
+.endereco{
+    width: 1186px;
+    height: 75px;
+    float: left;
+    background-color: gray;
+    margin-right: 10px;
+}
+.redeSocialR{
+    width: 75px;
+    height: 75px;
+    background-color: gray;
+    float: right;
+    margin-right: 10px; 
+}
+.borda75{
+    border-radius: 75px;
+}
