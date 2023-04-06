@@ -1,0 +1,44 @@
+*{
+    font-family: arial;
+}
+body
+{
+    margin: 0px;
+}
+
+.tamanhoDiv{
+    width: 200px;
+    height: 200px;
+    background-color: darkmagenta;
+    position: absolute;
+    font-size: 50px;
+    text-align: center;
+    line-height: 200px;
+    color: white;
+}
+
+#div1{
+    top:25px;
+    left: 25px;
+}
+
+#div2{
+    right: 25px;
+    top:25px
+}
+#div3{
+    left: 25px;
+    bottom: 25px;
+}
+#div4{
+    bottom: 25px;
+    right: 25px;
+}
+
+#div5{
+    left: 50%;
+    top: 50%;
+    margin-top: -100px;
+    margin-left: -100px;
+}
+

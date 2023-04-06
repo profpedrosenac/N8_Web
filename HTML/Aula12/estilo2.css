@@ -1,0 +1,70 @@
+*{
+    font-family: arial;
+}
+body{
+    margin: 0px;
+}
+
+.tamanhoDivs{
+    width: 200px;
+    height: 200px;
+    background-color: darkorange;
+    font-size: 50px;
+    text-align: center;
+    line-height: 200px;
+    position: absolute;
+}
+#div1{
+    left: 25px;
+    top: 25px;
+}
+#div2{
+    top: 25px;
+    right: 25px;
+}
+#div3{
+    left: 25px;
+    bottom: 25px;
+}
+#div4{
+    right: 25px;
+    bottom: 25px;
+}
+#div5{
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -100px;
+}
+#corpo{
+    width: 1000px;
+    height: 1250px;
+    background-color: aquamarine;
+    margin: auto;
+    position: relative;
+    margin-top: 75px;
+}
+
+#topo{
+    height: 75px;
+    width: 100%;
+    background-color: darkblue;
+    opacity: .7;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+}
+#irTopo{
+    height: 50px;
+    width: 50px;
+    background-color: brown;
+    position: fixed;
+    right: 35px;
+    bottom: 35px;
+    border-radius: 25px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    color: aliceblue;
+}
