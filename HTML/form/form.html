@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body class="bg-dark">
+    <div class="container bg-dark mt-3">
+        <div class="row">
+            <div class="col-sm-12">
+                <form action="" method="post" class="form-control" style="background-color: cadetblue;">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h1>Cadastro de Cliente</h1>
+                            <hr>
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="txtID">ID</label><br>
+                            <input type="number" name="txtID" id="txtID"  class="form-control" placeholder="Id Usuário">
+                        </div>
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-4">
+                            <label for="txtData">Data</label><br>
+                            <input type="date" name="txtData" id="txtData"  class="form-control">
+                        </div>
+                        <div class="col-sm-12">
+                            <label for="txtNome">Nome</label><br>
+                            <input type="text" name="txtNome" id="txtNome"  class="form-control" placeholder="Nome Usuário" required>
+                        </div>
+                        <div  class="col-sm-4">
+                            <label for="txtNascimento">Data Nascimento</label><br>
+                            <input type="date" name="txtNascimento" id="txtNascimento"  class="form-control" required>
+                        </div>
+                        <div  class="col-sm-4">
+                            <label for="txtUsuario">Usuário</label><br>
+                            <input type="text" name="txtUsuario" id="txtUsuario"  class="form-control" required>
+                        </div>
+                        <div  class="col-sm-4">
+                            <label for="txtSenha">Senha</label><br>
+                            <input type="password" name="txtSenha" id="txtSenha"  class="form-control" required>
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="txtEstadoCivil">Estado Civil</label><br>
+                            <select name="txtEstadoCivil" id="txtEstadoCivil"  class="form-control" required>
+                                <option value="">-- selecione --</option>
+                                <option value="Casado(a)">Casado(a)</option>
+                                <option value="Solteiro(a)">Solteiro(a)</option>
+                                <option value="Viuvo(a)">Viuvo(a)</option>
+                                <option value="Divorciado(a)">Divorciado(a)</option>
+                                <option value="Outros">Outros</option>
+                            </select>
+                        </div>
+                        <div  class="col-sm-6">
+                            <label for="txtStatus">Status</label><br>
+                            <select name="txtStatus" id="txtStatus"  class="form-control" required>
+                                <option value="">-- selecione --</option>
+                                <option value="Ativo">Ativo</option>
+                                <option value="Inativo">Inativo</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="txtObs">Observação</label> <br>  
+                            <textarea name="txtStatus" id="txtStatus" class="form-control" cols="30" rows="5"></textarea>
+                        </div>
+                        <div class="text-end mt-3">
+                            <button class="btn btn-primary">Pesquisar</button>
+                            <button class="btn btn-success">Cadastrar</button>
+                            <button class="btn btn-warning">Alterar</button>
+                            <button class="btn btn-danger">Excluir</button>                            
+                            <a href="form.html" class="btn btn-dark">Limpar</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
