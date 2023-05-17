@@ -1,0 +1,13 @@
+.padrao{
+    min-height: 200px;
+}
+.roxo{
+    background-color: yellow;
+}
+.rosa{
+    background-color: black;
+}
+.padrao2{
+    min-height: 100px;
+    line-height: 100px;
+}
