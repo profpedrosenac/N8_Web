@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/bootstrap.css">
 </head>
 <body>
+    <?php include_once('usuario_pesquisar.php') ?>
     <div class="container mt-3">
         <div class="row">
             <div class="col-sm-12 text-center">
@@ -17,29 +18,29 @@
         <form action="" method="post" class="form-control">
             <div class="row mt-3">
                 <div class="col-sm-4">
-                    <input type="number" class="form-control" min="0" name="txtID" id="txtID" placeholder="ID do Usuário">
+                    <input type="number" class="form-control" min="0" name="txtID" id="txtID" placeholder="ID do Usuário" value="<?=$idUsuario?>">
                 </div>
                 <div class="col-sm-4">
-                    <button class="btn btn-primary" name="btoPesquisar" id="btoPesquisar" formaction="usuario_pesquisar.php">&#128269;</button>
+                    <button class="btn btn-primary" name="btoPesquisar" id="btoPesquisar" formaction="frm_usuario.php">&#128269;</button>
                 </div>
                 <div class="col-sm-4">
-                    <input type="date" class="form-control" name="txtCadastro" id="txtCadastro">
+                    <input type="text" class="form-control" name="txtCadastro" id="txtCadastro" value="<?=$cadastroUsuario?>">
                 </div>
             </div>
             <div class="row mt-3">
                 <div class="col-sm-12">
-                    <input type="text" class="form-control" name="txtNome" id="txtNome" placeholder="Nome do usuário">
+                    <input type="text" class="form-control" name="txtNome" id="txtNome" placeholder="Nome do usuário" value="<?=$nomeUsuario?>">
                 </div>
             </div>
             <div class="row mt-3">
                 <div class="col-sm-4">
-                    <input type="text" class="form-control" name="txtLogin" id="txtLogin" placeholder="Login do Usuário">
+                    <input type="text" class="form-control" name="txtLogin" id="txtLogin" placeholder="Login do Usuário" value="<?=$loginUsuario?>">
                 </div>
                 <div class="col-sm-4">
-                    <input type="password" class="form-control" name="txtSenha" id="txtSenha" placeholder="Senha do Usuário">
+                    <input type="password" class="form-control" name="txtSenha" id="txtSenha" placeholder="Senha do Usuário" value="<?=$senhaUsuario?>">
                 </div>
                 <div class="col-sm-4">
-                    <input type="date" class="form-control" name="txtNascimento" id="txtNascimento" placeholder="Data Nascimento Usuário">
+                    <input type="text" class="form-control" name="txtNascimento" id="txtNascimento" placeholder="Data Nascimento Usuário" value="<?=$nascimentoUsuario?>">
                 </div>
             </div>
             <div class="row mt-3">
@@ -49,14 +50,14 @@
                 <div class="col-sm-4">
                     <select name="txtStatus" id="txtStatus" class="form-control">
                         <option value="">-- Selecione um Status --</option>
-                        <option value="Ativo">Ativo</option>
-                        <option value="Inativo">Inativo</option>
+                        <option value="Ativo" <?=($statusUsuario=='Ativo'?'selected':"") ?>>Ativo</option>
+                        <option value="Inativo" <?=($statusUsuario=='Inativo'?'selected':"") ?>>Inativo</option>
                     </select>
                 </div>
             </div>
             <div class="row mt-3">
                 <div class="col-sm-12">
-                    <textarea name="txtObs" id="txtObs" rows="5" class="form-control" placeholder="Observação do Usuário"></textarea>
+                    <textarea name="txtObs" id="txtObs" rows="5" class="form-control" placeholder="Observação do Usuário"><?=$obsUsuario?></textarea>
                 </div>
             </div>
             <div class="row mt-3">
