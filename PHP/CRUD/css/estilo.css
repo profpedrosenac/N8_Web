@@ -1,0 +1,34 @@
+#topo{
+    height: 150px;
+    background-color: cadetblue;
+}
+#logo{
+    height: 100px;
+    width: 400px;
+    margin: auto;
+    background-color:cornflowerblue;
+    margin-top: 25px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 30px;
+}
+#rodape{
+    height: 150px;
+    background-color: cadetblue;
+}
+.subMenu{
+    height: 60px;
+    line-height: 60px;
+    margin: 10px 0px;
+    text-align: center;
+    background-color: coral;
+    font-size: 20px;
+    color: white;
+    transition: 1s;
+}
+.subMenu:hover{
+    background-color: brown;
+}
+a{
+    text-decoration: none;
+}

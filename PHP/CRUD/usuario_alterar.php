@@ -53,4 +53,4 @@ else
 ?>
 
 <hr>
-<a href="frm_usuario.php">Voltar</a>
+<a href="_sistema.php?tela=usuario">Voltar</a>
