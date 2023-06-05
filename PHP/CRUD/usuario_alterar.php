@@ -13,6 +13,16 @@ if($_POST)
     $obs = $_POST['txtObs'];
 
     try {
+
+        if(isset($_FILES['txtImg']))
+        {
+            $img = $_FILES['txtImg'];
+        }
+        else
+        {
+            $img='';
+        }
+
         
         $sql = $conn->prepare("
             update usuario set
@@ -32,7 +42,7 @@ if($_POST)
             ':nascimento_Usuario'=>$nasc,
             ':usuario_Usuario'=>$login,
             ':senha_Usuario'=>$senha,
-            ':img_Usuario'=>$img,
+            ':img_Usuario'=>$img['name'],
             ':obs_Usuario'=>$obs,
             ':status_Usuario'=>$status
         ));
@@ -40,6 +50,17 @@ if($_POST)
         if($sql->rowCount()>=1)
         {
             echo '<p>Dados Alterados com sucesso</p>';
+
+            $pasta = 'imagem/'.$id.'/';
+
+            if(!file_exists($pasta))
+            {
+                mkdir($pasta);
+            }
+
+            $foto = $pasta.$img['name'];
+
+            move_uploaded_file($img['tmp_name'], $foto);
         }
 
     } catch (PDOException $ex) {

@@ -36,7 +36,7 @@
                     <div class='col-sm-3 text-center p-3'>
                         <a href='detalhe.php?id=$row[0]' target='_blanc'>
                         <div class='card'>
-                            <img src='$row[6]' class='w-100'>
+                            <img src='imagem/$row[0]/$row[6]'  style='height:270px'>
                             <h3>$row[1]</h3>
                         </div>
                         </a>

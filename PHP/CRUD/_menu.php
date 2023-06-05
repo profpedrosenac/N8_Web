@@ -21,7 +21,7 @@
     <p>ID:<?=$idUsuarioLogin?></p>
     <p>Nome:<?=$nomeUsuarioLogin?></p>
     <p>Login:<?=$loginUsuarioLogin?></p>
-    <p>Imagem:<?=$imgUsuarioLogin?></p>
+    <p> <img src="imagem/<?=$idUsuarioLogin?>/<?=$imgUsuarioLogin?>" alt="">  </p>
 </div>
 
 

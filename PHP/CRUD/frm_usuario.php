@@ -5,7 +5,7 @@
             <h1>Tela de gerenciamento de usuários</h1>
         </div>
     </div>
-    <form action="" method="post" class="form-control" id="frmUsuario">
+    <form action="" method="post" class="form-control" id="frmUsuario" enctype="multipart/form-data">
         <div class="row mt-3">
             <div class="col-sm-4">
                 <input type="number" class="form-control" min="0" name="txtID" id="txtID" placeholder="ID do Usuário" value="<?=$idUsuario?>">
@@ -43,6 +43,11 @@
                     <option value="Ativo" <?=($statusUsuario=='Ativo'?'selected':"") ?>>Ativo</option>
                     <option value="Inativo" <?=($statusUsuario=='Inativo'?'selected':"") ?>>Inativo</option>
                 </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <img src="imagem/<?=$idUsuario?>/<?=$imagemUsuario?>" alt="">
             </div>
         </div>
         <div class="row mt-3">

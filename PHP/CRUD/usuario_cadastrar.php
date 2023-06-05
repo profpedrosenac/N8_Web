@@ -11,7 +11,24 @@ if($_POST)
     $status = $_POST['txtStatus'];
     $obs = $_POST['txtObs'];
 
+    // echo '<pre>';
+    // print_r($_FILES);
+    // echo '</pre>';
+
+    
+    // return; 
+
     try {
+
+        if(isset($_FILES['txtImg']))
+        {
+            $img = $_FILES['txtImg'];
+        }
+        else
+        {
+            echo 'Erro, a imagem deve ser enviada';
+            return;
+        }
         
         $sql = $conn->prepare("
             insert into usuario
@@ -41,7 +58,7 @@ if($_POST)
             ':nascimento_Usuario'=>$nasc,
             ':usuario_Usuario'=>$login,
             ':senha_Usuario'=>$senha,
-            ':img_Usuario'=>$img,
+            ':img_Usuario'=>$img['name'],
             ':obs_Usuario'=>$obs,
             ':status_Usuario'=>$status
         ));
@@ -50,6 +67,18 @@ if($_POST)
         {
             echo '<p>Dados Cadastrados com sucesso</p>';
             echo '<p>ID Gerado: '.$conn->lastInsertId().'</p>';
+
+            $pasta = 'imagem/'.$conn->lastInsertId().'/';
+
+            if(!file_exists($pasta))
+            {
+                mkdir($pasta);
+            }
+
+            $foto = $pasta.$img['name'];
+
+            move_uploaded_file($img['tmp_name'], $foto);
+
         }
 
     } catch (PDOException $ex) {
