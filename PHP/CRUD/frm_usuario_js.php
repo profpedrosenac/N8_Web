@@ -15,7 +15,7 @@
                 <h1>Tela de gerenciamento de usuários</h1>
             </div>
         </div>
-        <form action="" method="post" class="form-control" onsubmit="return false;" id="frmUsuario">
+        <form action="" method="post" class="form-control" onsubmit="return false;" id="frmUsuario"  enctype="multipart/form-data">
             <div class="row mt-3">
                 <div class="col-sm-4">
                     <input type="number" class="form-control" min="0" name="txtID" id="txtID" placeholder="ID do Usuário" value="<?=$idUsuario?>">
@@ -63,9 +63,9 @@
             <div class="row mt-3">
                 <div class="col-sm-12 text-end">
                     <button name="btoCadastrar" id="btoCadastrar" class="btn btn-success" formaction="usuario_cadastrar.php" onclick="Cadastrar()">Cadastrar</button>
-                    <button name="btoAlterar" id="btoAlterar" class="btn btn-secondary" formaction="usuario_alterar.php">Alterar</button>
+                    <button name="btoAlterar" id="btoAlterar" class="btn btn-secondary" formaction="usuario_alterar.php" onclick="Alterar()">Alterar</button>
                     <a href="frm_usuario.php" name="btoLimpar" id="btoLimpar" class="btn btn-warning">Limpar</a>
-                    <button name="btoExcluir" id="btoExcluir" class="btn btn-danger" formaction="usuario_excluir.php">Excluir</button>
+                    <button name="btoExcluir" id="btoExcluir" class="btn btn-danger" formaction="usuario_excluir.php" onclick="Excluir()">Excluir</button>
                     <button name="btoSair" id="btoSair" class="btn btn-dark">Sair</button>
                 </div>
             </div>
@@ -84,14 +84,28 @@
             }
 
             let form = document.getElementById('frmUsuario');
-            form.action = 'frm_usuario.php';
-            form.method = 'POST';
+            //form.action = 'frm_usuario_js.php';
+            //form.method = 'POST';
             form.submit();
         }
 
         function Cadastrar(){
             let form = document.getElementById('frmUsuario');
             form.action = 'usuario_cadastrar.php';
+            form.method = 'POST';
+            form.submit();
+        }
+
+        function Alterar(){
+            let form = document.getElementById('frmUsuario');
+            form.action = 'frm_usuario.php';
+            form.method = 'POST';
+            form.submit();
+        }
+
+        function Excluir(){
+            let form = document.getElementById('frmUsuario');
+            form.action = 'usuario_excluir.php';
             form.method = 'POST';
             form.submit();
         }

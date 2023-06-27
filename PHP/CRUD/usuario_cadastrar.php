@@ -1,6 +1,8 @@
 <?php
 include_once('conexao.php');
 
+print_r($_POST);
+
 if($_POST)
 {
     $nome = $_POST['txtNome'];
