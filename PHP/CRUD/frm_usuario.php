@@ -5,13 +5,13 @@
             <h1>Tela de gerenciamento de usuários</h1>
         </div>
     </div>
-    <form action="" method="post" class="form-control" id="frmUsuario" enctype="multipart/form-data">
+    <form action="" method="post" class="form-control" id="frmUsuario" enctype="multipart/form-data" onsubmit="return false;">
         <div class="row mt-3">
             <div class="col-sm-4">
                 <input type="number" class="form-control" min="0" name="txtID" id="txtID" placeholder="ID do Usuário" value="<?=$idUsuario?>">
             </div>
             <div class="col-sm-4">
-                <button class="btn btn-primary" name="btoPesquisar" id="btoPesquisar" formaction="_sistema.php?tela=usuario">&#128269;</button>
+                <button class="btn btn-primary" name="btoPesquisar" id="btoPesquisar" formaction="_sistema.php?tela=usuario" onclick="Pesquisar()">&#128269;</button>
             </div>
             <div class="col-sm-4">
                 <input type="date" class="form-control" name="txtCadastro" id="txtCadastro" value="<?=substr($cadastroUsuario,0,10)?>">
@@ -67,3 +67,21 @@
     </form>
     
 </div>
+
+<script>
+    let formulario = document.getElementById("frmUsuario");
+    let id = document.getElementById("txtID");
+
+    function Pesquisar()
+    {
+        if(id.value.trim() == "")
+        {
+            alert("Erro, o código deve ser preenchido");
+            id.focus();
+            return;
+        }
+        
+        formulario.action = "_sistema.php?tela=usuario";
+        formulario.submit();
+    }
+</script>
